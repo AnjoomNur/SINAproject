@@ -74,21 +74,21 @@
                         <div class="footer-logo">
                             <img src="{%static ''%}images/menu/logo/1.jpg" alt="Footer Logo">
                             <p class="info">
-                                We are a team of designers and developers that create high quality HTML Template & Woocommerce, Shopify Theme.
+                                {{settings.description}}
                             </p>
                         </div>
                         <ul class="des">
                             <li>
                                 <span>Address: </span>
-                                6688Princess Road, London, Greater London BAS 23JK, UK
+                                {{setting.address}}
                             </li>
                             <li>
                                 <span>Phone: </span>
-                                <a href="#">(+123) 123 321 345</a>
+                                <a href="#">{{setting.phone}}</a>
                             </li>
                             <li>
                                 <span>Email: </span>
-                                <a href="mailto://info@yourdomain.com">info@yourdomain.com</a>
+                                <a href="mailto://info@yourdomain.com">{{setting.email}}</a>
                             </li>
                         </ul>
                     </div>
@@ -215,7 +215,7 @@
                     <!-- Footer Payment Area End Here -->
                     <!-- Begin Copyright Area -->
                     <div class="copyright text-center pt-25">
-                        <span><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></span>
+                        <span><a target="_blank" href="https://www.templateshub.net"></a></span>
                     </div>
                     <!-- Copyright Area End Here -->
                 </div>

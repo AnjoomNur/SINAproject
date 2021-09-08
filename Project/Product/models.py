@@ -47,6 +47,12 @@ class Product(models.Model):
     def image_tag(self):
         return mark_safe('<img src="{}" heights="70" width="60"/>'.format(self.image.url))
     image_tag.short_description = 'Image'
+    
+    def ImageUrl(self):
+        if self.image:
+            return self.image.url
+        else:
+            return ""
 
 
 class Images(models.Model):
