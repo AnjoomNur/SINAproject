@@ -9,14 +9,16 @@
                     <div class="slider-active owl-carousel">
                         <!-- Begin Single Slide Area -->
                         {% for p in sliding_images %}
-                        <div class="single-slide align-center-left  animation-style-01 bg-1">
+                        <div class="single-slide align-center-left  animation-style-0{{p.id}} bg-{{p.id}}">
+                            <img src="{{p.ImageUrl}}" alt="">
+
                             <div class="slider-progress"></div>
                             <div class="slider-content">
                                 <h5>Sale Offer <span>-20% Off</span> This Week</h5>
                                 <h2>{{p.title}}</h2>
                                 <h3>Starting at <span>{{p.new_price}}</span></h3>
                                 <div class="default-btn slide-btn">
-                                    <a class="links" href="shop-left-sidebar.html"><img src="{{p.ImageUrl}}" alt=""></a>
+                                    <a class="links" href="shop-left-sidebar.html">Shopping Now</a>
                                 </div>
                             </div>
                         </div>
