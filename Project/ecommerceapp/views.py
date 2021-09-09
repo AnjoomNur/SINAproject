@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from ecommerceapp.models import Setting
-from Product.models import Product
+from Product.models import Product,Images
 
 # Create your views here.
 def Home(request):
@@ -13,3 +13,14 @@ def Home(request):
             'latest_products': latest_products,
             'products': products}
     return render(request,'home.html', context)
+
+def product_single(request,id):
+        
+        setting=Setting.objects.get(id=1)
+        single_product=Product.objects.get(id=id)
+        images=Images.objects.filter(product_id=id)
+        context={'setting': setting,
+                 'single_product': single_product, 
+                 'images':images,
+        }
+        return render(request,'product-single.html',context)
